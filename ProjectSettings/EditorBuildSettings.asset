@@ -10,9 +10,12 @@ EditorBuildSettings:
     guid: 85323fb64529b754dac35fa73788cb47
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: ad2928f45847a494ba34483d82b66fd3
   - enabled: 1
     path: Assets/Scenes/Realm.unity
     guid: 65e0f24c8ac96f74494b513233c02f83
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

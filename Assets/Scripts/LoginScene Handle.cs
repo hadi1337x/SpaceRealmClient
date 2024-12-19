@@ -1,9 +1,7 @@
-using LiteNetLib;
-using LiteNetLib.Utils;
+using ENet;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -43,13 +41,14 @@ public class LoginSceneHandle : MonoBehaviour
     public GameObject ErrorLoginTxt;
     public GameObject ErrorRegTXT;
 
-    private NetDataWriter writer;
+    private Connection connection;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -57,14 +56,111 @@ public class LoginSceneHandle : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name != "LoginScene")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (connection.isConnected)
+        {
+            ConnectionUI.SetActive(false);
+        }
+        else
+        {
+            ConnectionUI.SetActive(true);
+            ConnectionText.text = "No Internet Connection.";
+            UI.SetActive(false);
+            ConnectionUI.SetActive(true);
+        }
+    }
+
+    private void Start()
+    {
+        connection = Connection.instance;
+
+        if (connection == null)
+        {
+            Debug.LogError("ENetConnection instance not found!");
+            return;
+        }
+
+        StartCoroutine(HandleConnection());
+    }
+
+    private IEnumerator HandleConnection()
+    {
+        while (true)
+        {
+            if (Connection.instance.isConnected)
+            {
+                ConnectionText.text = "Connected!";
+                UI.SetActive(true);
+                ConnectionUI.SetActive(false);
+            }
+            else
+            {
+                ConnectionText.text = "No Internet Connection.";
+                UI.SetActive(false);
+                ConnectionUI.SetActive(true);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+    public void OnLoginBtnClicked()
+    {
+        string username = usernameInput.text;
+        string password = passwordInput.text;
+        SendRequest("LoginRequest", username, password, "");
+    }
+
+    public void OnRegBtnClicked()
+    {
+        string username = usernameInputReg.text;
+        string password = passwordInputReg.text;
+        string email = emailInput.text;
+        SendRequest("RegisterRequest", username, password, email);
+    }
+
+    private void SendRequest(string action, string username, string password, string email)
+    {
+        string message = $"{action}|{username}|{password}|{email}";
+        byte[] messageData = System.Text.Encoding.UTF8.GetBytes(message);
+
+        Packet packet = default;
+        packet.Create(messageData, PacketFlags.Reliable);
+        if(action == "LoginRequest")
+        {
+            connection.SendLoginPacket(packet);
+        }
+        else
+        {
+            connection.SendRegisterPacket(packet);
+        }
+        Debug.Log($"Sent request: {message}");
+    }
+
     public void FailedLogin()
     {
         ErrorLoginTxt.SetActive(true);
     }
+
     public void FailedRegister()
     {
         ErrorRegTXT.SetActive(true);
     }
+
     public void OnTabLoginBTNClicked()
     {
         RegisterTabBTN.image.sprite = TabBTNUnClicked;
@@ -73,6 +169,7 @@ public class LoginSceneHandle : MonoBehaviour
         LoginPanel.SetActive(true);
         RegisterPanel.SetActive(false);
     }
+
     public void OnTabRegisterBTNClicked()
     {
         LoginTabBTN.image.sprite = TabBTNUnClicked;
@@ -81,79 +178,28 @@ public class LoginSceneHandle : MonoBehaviour
         LoginPanel.SetActive(false);
         RegisterPanel.SetActive(true);
     }
-    public void Start()
-    {
-        writer = new NetDataWriter();
-    }
-    public void Update()
-    {
-        OnGameConnection();
-    }
-    public void OnLoginBtnClicked()
-    {
-        string username = usernameInput.text;
-        string password = passwordInput.text;
-        SendRequest("OnLoginPacket", username, password, "");
-    }
-    public void OnRegBtnClicked()
-    {
-        string username = usernameInputReg.text;
-        string password = passwordInputReg.text;
-        string email = emailInput.text;
-        SendRequest("OnRegPacket", username, password, email);
-    }
-    private void SendRequest(string action, string username, string password, string email)
-    {
-        if (Connection.Instance != null && Connection.Instance.IsConnected)
-        {
-            writer.Reset();
-            writer.Put(action);
-            writer.Put(username);
-            writer.Put(password);
-            writer.Put(email);
 
-            Connection.Instance.Server.Send(writer, DeliveryMethod.ReliableOrdered);
-        }
-        else
-        {
-            Debug.LogError("Not connected to the server");
-        }
-    }
-    public void OnGameConnection()
-    {
-        if (Connection.Instance.IsConnected)
-        {
-            ConnectionText.text = "Connecting...";
-            StartCoroutine(FillConnectionBar());
-            UI.SetActive(true);
-            ConnectionUI.SetActive(false);
-        }
-        else
-        {
-            ConnectionText.text = "No Internet Connection.";
-            UI.SetActive(false);
-            ConnectionUI.SetActive(true);
-        }
-    }
-    private IEnumerator FillConnectionBar()
+    public IEnumerator FillConnectionBar()
     {
         float elapsedTime = 0f;
-        float duration = 10f; 
+        float duration = 10f;
 
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
-            ConnectionBar.value = Mathf.Lerp(0, 1, elapsedTime / duration); 
-            yield return null; 
+            ConnectionBar.value = Mathf.Lerp(0, 1, elapsedTime / duration);
+            yield return null;
         }
 
         ConnectionBar.value = 1;
     }
+
     public void LoadNextScene()
     {
-        Debug.Log("SendingScene Transition");
+        Debug.Log("Sending Scene Transition");
         StartCoroutine(WaitAndLoadScene());
     }
+
     public IEnumerator WaitAndLoadScene()
     {
         SceneTrans.SetActive(true);

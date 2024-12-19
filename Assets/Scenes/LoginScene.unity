@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1916309240}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LoginSceneHandle, Assembly-CSharp
         m_MethodName: OnTabRegisterBTNClicked
         m_Mode: 1
@@ -1044,54 +1044,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &380452969
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 380452971}
-  - component: {fileID: 380452970}
-  m_Layer: 0
-  m_Name: Connection
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &380452970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380452969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93160fb668cdb0c41aac69942092615a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyUsername: 
-  MyPeerID: 0
-  playerPrefab: {fileID: 7356520332800872326, guid: e6efa66d86f56ed4a83793b9f4007d5e, type: 3}
-  playerSpawnPosition: {x: 0, y: 0, z: 0}
---- !u!4 &380452971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380452969}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 919.4237, y: 302.9246, z: 0.707844}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409388889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,8 +1160,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Username...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1344,8 +1296,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Login
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1679,8 +1631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Password...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2135,8 +2087,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Login
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2295,7 +2247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1916309240}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LoginSceneHandle, Assembly-CSharp
         m_MethodName: OnTabLoginBTNClicked
         m_Mode: 1
@@ -2404,8 +2356,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Register
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2481,6 +2433,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625232830}
   m_CullTransparentMesh: 1
+--- !u!1 &740718351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740718353}
+  - component: {fileID: 740718352}
+  m_Layer: 0
+  m_Name: ItemsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &740718352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740718351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af51934a8477c94ebe4b1df68f8c5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blankTile: {fileID: 11400000, guid: 960359bb623ed5d47bf4b2379eba41a2, type: 2}
+  dirtTile: {fileID: 11400000, guid: dd82bf634f3a3a84eba66e18ff724b67, type: 2}
+  caveBack: {fileID: 11400000, guid: 067e880320249de4baf78ad5887c9ad8, type: 2}
+  lavaBlock: {fileID: 11400000, guid: 35f1ddacb2273914baa8925a1fdfbe20, type: 2}
+  bedrockBlock: {fileID: 11400000, guid: c982921173e45ce4384773cc1783dc0d, type: 2}
+  mainDoor: {fileID: 11400000, guid: 6ce6f1b639e1a4442a004ad430758873, type: 2}
+--- !u!4 &740718353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740718351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 972.96936, y: 399.339, z: -13.066796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897051442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,8 +2567,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2962,7 +2964,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1916309240}
+      - m_Target: {fileID: 1916309242}
         m_TargetAssemblyTypeName: LoginSceneHandle, Assembly-CSharp
         m_MethodName: OnRegBtnClicked
         m_Mode: 1
@@ -3820,8 +3822,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4138,8 +4140,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4215,6 +4217,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151887066}
   m_CullTransparentMesh: 1
+--- !u!1 &1209109931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209109933}
+  - component: {fileID: 1209109932}
+  m_Layer: 0
+  m_Name: Connection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209109932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209109931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9ff380aaf567934c91ca5f3f96178aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isConnected: 0
+  myPlayerFactory: {fileID: 7356520332800872326, guid: e6efa66d86f56ed4a83793b9f4007d5e, type: 3}
+  otherPlayerFactory: {fileID: 2534460060762571083, guid: d9e2d72deda32b345b94760598d1d6f7, type: 3}
+--- !u!4 &1209109933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209109931}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 397.95343, y: -311.00766, z: -13.675601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349415580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,8 +4752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4780,50 +4829,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689198115}
   m_CullTransparentMesh: 1
---- !u!1 &1705867994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1705867996}
-  - component: {fileID: 1705867995}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1705867995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705867994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94819f1760d82e24585a210fa1060fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1705867996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705867994}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1331.7826, y: 108.27712, z: -5.576056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709829759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4907,7 +4912,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1916309240}
+      - m_Target: {fileID: 1916309242}
         m_TargetAssemblyTypeName: LoginSceneHandle, Assembly-CSharp
         m_MethodName: OnLoginBtnClicked
         m_Mode: 1
@@ -5253,8 +5258,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Connecting...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
-  m_sharedMaterial: {fileID: 4935368013695610636, guid: 3ef74a87567778343af4c5f19fd2527a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5349,50 +5354,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000061035156, y: 639}
   m_SizeDelta: {x: -1050.9, y: 53.28}
   m_Pivot: {x: 0.5, y: 0}
---- !u!1 &1839755002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1839755004}
-  - component: {fileID: 1839755003}
-  m_Layer: 0
-  m_Name: ItemsDatabase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1839755003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839755002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8030ee3a139afc840b9a61a03dcada63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1839755004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839755002}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1331.7826, y: 108.27712, z: -5.576056}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916309239
 GameObject:
   m_ObjectHideFlags: 0
@@ -5402,7 +5363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916309241}
-  - component: {fileID: 1916309240}
+  - component: {fileID: 1916309242}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -5410,38 +5371,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1916309240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916309239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87a89e260260886459ec553631e49789, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneTrans: {fileID: 1349415580}
-  LoginTabBTN: {fileID: 599776810}
-  RegisterTabBTN: {fileID: 260843818}
-  LoginPanel: {fileID: 728113}
-  RegisterPanel: {fileID: 911575494}
-  TabBTNClicked: {fileID: 21300000, guid: 8428abab5115e26488461e06276d471e, type: 3}
-  TabBTNUnClicked: {fileID: 21300000, guid: cdc0cc815e49daf419b1ad40e3ad5fe9, type: 3}
-  UI: {fileID: 979060828}
-  ConnectionUI: {fileID: 2065334335}
-  ConnectionBar: {fileID: 489342633}
-  ConnectionText: {fileID: 1837436919}
-  usernameInput: {fileID: 531835759}
-  passwordInput: {fileID: 474568607}
-  usernameInputReg: {fileID: 287807962}
-  passwordInputReg: {fileID: 1073746692}
-  emailInput: {fileID: 1809247403}
-  loginButton: {fileID: 1709829761}
-  registerButton: {fileID: 916227717}
-  ErrorLoginTxt: {fileID: 1663022981}
-  ErrorRegTXT: {fileID: 1929905198}
 --- !u!4 &1916309241
 Transform:
   m_ObjectHideFlags: 0
@@ -5457,6 +5386,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916309242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916309239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eeafe91fba0abf4aade15e057e4df4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneTrans: {fileID: 1349415580}
+  LoginTabBTN: {fileID: 599776810}
+  RegisterTabBTN: {fileID: 260843818}
+  LoginPanel: {fileID: 728113}
+  RegisterPanel: {fileID: 728113}
+  TabBTNClicked: {fileID: 21300000, guid: 8428abab5115e26488461e06276d471e, type: 3}
+  TabBTNUnClicked: {fileID: 21300000, guid: cdc0cc815e49daf419b1ad40e3ad5fe9, type: 3}
+  UI: {fileID: 979060828}
+  ConnectionUI: {fileID: 2065334335}
+  ConnectionBar: {fileID: 489342633}
+  ConnectionText: {fileID: 1837436919}
+  usernameInput: {fileID: 531835759}
+  passwordInput: {fileID: 474568607}
+  usernameInputReg: {fileID: 287807962}
+  passwordInputReg: {fileID: 1073746692}
+  emailInput: {fileID: 1809247403}
+  loginButton: {fileID: 1709829761}
+  registerButton: {fileID: 916227717}
+  ErrorLoginTxt: {fileID: 1663022981}
+  ErrorRegTXT: {fileID: 1929905198}
 --- !u!1 &1929905198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5840,6 +5801,5 @@ SceneRoots:
   - {fileID: 979060832}
   - {fileID: 1359078403}
   - {fileID: 1916309241}
-  - {fileID: 380452971}
-  - {fileID: 1705867996}
-  - {fileID: 1839755004}
+  - {fileID: 1209109933}
+  - {fileID: 740718353}

@@ -1,5 +1,5 @@
-using LiteNetLib;
-using LiteNetLib.Utils;
+using ENet;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -23,26 +23,42 @@ public class WorldManager : MonoBehaviour
     public Sprite TabBTNClicked;
     public Sprite TabBTNUnClicked;
 
-    private NetDataWriter writer;
     public TMP_InputField worldName;
 
     private void Start()
     {
-        writer = new NetDataWriter();
+        
+    }
+    private void FixedUpdate()
+    {
+        if (Connection.instance.isConnected)
+        {
+            disconnectionDialog.SetActive(false);
+        }
+        else
+        {
+            disconnectionDialog.SetActive(true);
+        }
     }
     public void OnEnterWorld()
     {
         if (worldName.text != string.Empty)
         {
-            writer.Put("RetrieveWorld");
-            writer.Put(worldName.text);
-            Connection.Instance.Server.Send(writer, DeliveryMethod.ReliableOrdered);
+            string message = $"{"RetrieveWorld"}|{Connection.instance.myInfo.playerId}|{worldName.text}";
+            byte[] messageData = System.Text.Encoding.UTF8.GetBytes(message);
+            Debug.Log(message);
+            Packet packet = default;
+            packet.Create(messageData, PacketFlags.Reliable);
+            Connection.instance.SendWorldPacket(packet);
         }
         else
         {
-            writer.Put("RetrieveWorld");
-            writer.Put("TUTORIAL");
-            Connection.Instance.Server.Send(writer, DeliveryMethod.ReliableOrdered);
+            string message = $"{"RetrieveWorld"}|{Connection.instance.myInfo.playerId}|{"WELCOME"}";
+            byte[] messageData = System.Text.Encoding.UTF8.GetBytes(message);
+
+            Packet packet = default;
+            packet.Create(messageData, PacketFlags.Reliable);
+            Connection.instance.SendWorldPacket(packet);
         }
     }
     public void RealmClicked()

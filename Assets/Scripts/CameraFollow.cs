@@ -1,57 +1,19 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using System.IO.Compression;
-using System.IO;
-using System.Text;
-using System.Collections;
+﻿using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
-    public Vector3 offset;
-    private bool isPlayerAssigned = false;
+    public Transform player;   
+    public float smoothSpeed = 0.125f;   
+    public Vector3 offset;   
 
-    void Start()
+    private void LateUpdate()
     {
-        StartCoroutine(AssignPlayerAfterSpawn());
-    }
+        if (player != null)
+        {
+            Vector3 desiredPosition = player.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
-    private IEnumerator AssignPlayerAfterSpawn()
-    {
-        while (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player")?.transform;
-            yield return null;
-        }
-
-        offset = transform.position;
-        if (player.CompareTag("Player"))
-        {
-            isPlayerAssigned = true;
-        }
-        else
-        {
-            Debug.LogError("Player is not the local player or Player tag is missing.");
-        }
-    }
-    void LateUpdate()
-    {
-        if (isPlayerAssigned)
-        {
-            transform.position = player.position + offset;
-            Debug.Log($"Camera Updated to Position: {transform.position}");
-        }
-    }
-
-    void Update()
-    {
-        if (isPlayerAssigned)
-        {
-            transform.position = player.position + offset;
-            Debug.Log("CamCam");
+            transform.position = smoothedPosition;
         }
     }
 }
